@@ -1,0 +1,91 @@
+/* Style général */
+body {
+  font-family: "Arial", sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #f8f8f8;
+  text-align: center;
+  padding-top: 80px; /* Décale tout le contenu pour éviter d'être caché sous la barre de navigation */
+}
+
+/* Barre de navigation fixée en haut */
+nav {
+  background: #d63384;
+  padding: 15px 0;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+}
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+}
+nav ul li {
+  display: inline;
+  margin: 0 15px;
+}
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 18px;
+  padding: 10px;
+}
+
+/* Ajuster la hauteur et l'affichage des sections */
+.section {
+  min-height: 100vh; /* Chaque section occupe toute la hauteur de l'écran */
+  display: none;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+  padding: 20px; /* Ajoute de l'espace autour du contenu */
+}
+
+/* Affiche uniquement la section active */
+.section.active {
+  display: block;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Conteneur général */
+.container {
+  max-width: 800px;
+  margin: auto;
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* 📷 Correction pour la galerie */
+#galerie img {
+  width: 90%; /* Réduit la taille des images */
+  max-width: 400px; /* Empêche les images d'être trop grandes */
+  margin: 10px;
+  border-radius: 10px;
+}
+
+/* Formulaire */
+input,
+button {
+  padding: 10px;
+  width: 90%;
+  margin: 5px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+button {
+  background: #d63384;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+button:hover {
+  background: #b0256e;
+}

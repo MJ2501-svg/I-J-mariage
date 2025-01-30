@@ -1,0 +1,161 @@
+/* Style général */
+body {
+  font-family: "Arial", sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #f8f8f8;
+  text-align: center;
+  padding-top: 80px; /* Décale tout le contenu pour éviter qu'il soit caché sous la barre de navigation */
+}
+
+/* Barre de navigation fixée en haut */
+nav {
+  background: #d63384;
+  padding: 15px 0;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+}
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+}
+nav ul li {
+  display: inline;
+  margin: 0 15px;
+}
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 18px;
+  padding: 10px;
+  display: inline-block; /* Ajouté pour les liens cliquables */
+}
+
+/* Sections : pleine page, image d'arrière-plan et texte centré */
+.section {
+  height: 100vh; /* Chaque section prend toute la hauteur de l'écran */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  scroll-snap-align: start; /* Permet de forcer le scroll sur chaque section */
+}
+
+/* Filtre semi-transparent sur l'image d'arrière-plan */
+.section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5); /* Filtre noir semi-transparent */
+  z-index: 1;
+}
+
+/* Le contenu de la section au-dessus du filtre */
+.section .container {
+  position: relative;
+  z-index: 2;
+  color: white; /* Texte blanc pour contraster */
+  text-align: center;
+  padding: 20px;
+  max-width: 800px; /* Limite la largeur du contenu */
+}
+
+/* Page d'accueil : Arrière-plan personnalisé */
+#accueil {
+  background: url("images/mariage.jpg") no-repeat center center/cover;
+  background-size: cover; /* L’image couvre toute la section */
+  background-position: 50% 30%;
+}
+
+/* Programme : Arrière-plan personnalisé */
+#programme {
+  background: url("images/programme.jpg") no-repeat center center/cover;
+  background-position: 50% 30%;
+  background-size: cover;
+}
+
+/* Confirmation : Arrière-plan personnalisé */
+#rsvp {
+  background: url("images/confirmation.jpg") no-repeat center center/cover;
+  background-size: cover;
+}
+
+/* Galerie : ajustement des images */
+#galerie img {
+  width: 90%;
+  max-width: 400px;
+  margin: 10px;
+  border-radius: 10px;
+}
+
+/* Formulaire */
+input,
+button {
+  padding: 10px;
+  width: 90%;
+  margin: 5px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+button {
+  background: #d63384;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+button:hover {
+  background: #b0256e;
+}
+
+/* Permet de rendre le scroll fluide */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Assurez-vous que le texte et les éléments ne sont pas trop larges sur mobile */
+@media only screen and (max-width: 768px) {
+  body {
+    padding-top: 50px; /* Décale légèrement le contenu sous la barre de navigation sur mobile */
+  }
+
+  nav ul {
+    text-align: left;
+  }
+
+  nav ul li {
+    display: block; /* Change l'affichage en colonne pour les petits écrans */
+    margin-bottom: 10px; /* Marge pour séparer les éléments */
+  }
+
+  nav ul li a {
+    font-size: 16px; /* Réduit la taille du texte des liens */
+  }
+
+  /* Section Accueil */
+  #accueil .container {
+    padding: 20px;
+  }
+
+  /* Images de la galerie */
+  #galerie img {
+    width: 100%;
+    max-width: 350px; /* Ajuste la largeur des images sur mobile */
+    margin: 10px 0;
+  }
+
+  /* Formulaire */
+  input,
+  button {
+    width: 100%; /* Prend toute la largeur de l'écran sur mobile */
+    margin: 5px 0;
+  }
+}

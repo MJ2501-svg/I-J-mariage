@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Invitation Mariage - Ivan & Jeannette</title>
+    <link rel="stylesheet" href="style.css" />
+    <script
+      type="text/javascript"
+      src="https://cdn.emailjs.com/dist/email.min.js"
+    ></script>
+  </head>
+  <body>
+    <!-- Barre de navigation -->
+    <nav>
+      <ul>
+        <li><a href="#accueil">Accueil</a></li>
+        <li><a href="#programme">Programme</a></li>
+        <li><a href="#galerie">Galerie</a></li>
+        <li><a href="#rsvp">Confirmation</a></li>
+      </ul>
+    </nav>
+
+    <!-- Sections -->
+    <section id="accueil" class="section active">
+      <div class="container">
+        <h1>Invitation au Mariage</h1>
+        <p class="date">Le 13 décembre 2025</p>
+        <p>
+          La famille Nkessi et Mutombo ont le plaisir de vous inviter au mariage
+          religieux de leur fils <strong>Ivan Kamwa</strong> et de leur fille
+          <strong>Mutombo Jeannette</strong>.
+        </p>
+      </div>
+    </section>
+
+    <section id="programme" class="section">
+      <div class="container">
+        <h2>Programme de la Journée</h2>
+        <p><strong>16h00</strong> - Bénédiction nuptiale</p>
+        <p><strong>18h00</strong> - Vin d'honneur</p>
+        <p><strong>20h00</strong> - Soirée festive</p>
+      </div>
+    </section>
+
+    <section id="galerie" class="section">
+      <div class="container">
+        <h2>Galerie</h2>
+        <img src="images/photo1.jpg" alt="Ivan et Jeannette" />
+        <img src="images/photo2.jpg" alt="Souvenir" />
+      </div>
+    </section>
+
+    <section id="rsvp" class="section">
+      <div class="container">
+        <h2>Confirmez votre Présence</h2>
+        <form id="rsvpForm">
+          <input type="text" id="nom" placeholder="Votre nom" required /><br />
+          <input
+            type="email"
+            id="email"
+            placeholder="Votre email"
+            required
+          /><br />
+          <button type="submit">Envoyer</button>
+        </form>
+        <p id="message"></p>
+      </div>
+    </section>
+
+    <script src="script.js"></script>
+  </body>
+</html>
